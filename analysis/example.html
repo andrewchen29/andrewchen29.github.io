@@ -4,6 +4,34 @@
         <title>Expository Essay Analysis: Example</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <style>
+            span.joint {
+                color: #a6611a;
+            }
+
+            span.vocab {
+                padding: 0 4px;
+                border-radius: 2px;
+                background-color: #018571;
+                color: white;
+            }
+
+            span.vocab > span {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 10px;
+                border-radius: 2px;
+                background-color: #dfc27d;
+                color: #000a16;
+                opacity: 0.9;
+            }
+
+            span.vocab:hover > span{
+                display: block;
+            }
+
+        </style>
     </head>
     <body>
         <nav>
@@ -22,11 +50,34 @@
             </figure>
             <section>
                 <h3>[Sec. #1]</h3>
-                <p>S1</p>
+                <p>When Carl Sagan imagined sending humans to Mars in his book "The Cosmic Connec  tion," published in 
+                    1973, he posed a problem beyond such a mission's cost and complexity:  the possibility that life 
+                    already existed on the red planet and that it might not play nice.
+                    <span class="joint">▶</span> "It is possible that on Mars there are pathogens;' he wrote, "organisms which, if transported to 
+                    the terrestrial environment, might do enormous biological damage -   a Martian plague."
+                    Michael Crichton imagined a related scenario in his novel "The Andromeda Strain."
+                    Such situations, in which <span class="vocab">extraterrestrial <span><b>"extraterrestrial"</b> - of or from outside the earth or its atmosphere</span> </span> samples contain dangerous tagalong organisms, are 
+                    examples of backward contamination, or the risk of material from other worlds harming Earth's 
+                    biosphere.
+                    "The likelihood that such pathogens exist is probably small," Sagan wrote, "but we cannot take even 
+                    a small risk with a billion lives."
+                </p>
             </section>
             <section>
                 <h3>[Sec. #2]</h3>
-                <p>S2</p>
+                <p>Scientists have long considered Sagan's warnings in mostly hypothetical terms. But over the 
+                    approaching decade, they will start to act concretely on backward contamination risks. NASA and the 
+                    European Space Agency are gearing up for a shared mission called Mars Sample Retu rn. A rover on 
+                    the red planet is currently scooping up material that will be collected by other spacecraft and 
+                    eventually returned to Earth.
+                    No one can say for sure that such material will not contain tiny Martians  . If it does, no one can 
+                    yet say for sure they are not harmful to Earthlings.
+                    With such concerns in mind, NASA must act as if samples from Mars could spawn the next pandemic. 
+                    <span class="joint">▶</span>"Because it is not a zero­ percent chance, we are doing our due diligence to make sure that there's 
+                    no possibility of contamination," said Andrea Harrington, the Mars sample curator for NASA. Thus, 
+                    the agency plans to handle the returned samples similarly to how the Centers for Disease Control 
+                    and Prevention handles ebola: carefully.
+                </p>
             </section>
         </article>
     </body>
