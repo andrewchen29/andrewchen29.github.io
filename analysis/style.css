@@ -57,9 +57,10 @@ nav {
 nav > a {
     background-color: #323232;
     color: white;
-    padding: 3px 4px;
+    padding: 3px 10px;
     text-decoration: none;
     opacity: 0.6;
+    cursor: pointer;
 }
 
 nav > a:visited {
@@ -68,6 +69,15 @@ nav > a:visited {
 
 nav > a:hover {
     opacity: 1;
+}
+
+nav > a:not(:first-of-type) {
+    border-left: 2px solid white;
+    display: none;
+}
+
+nav > a > span.rotated {
+    transform: rotate(45deg);
 }
 
 article {

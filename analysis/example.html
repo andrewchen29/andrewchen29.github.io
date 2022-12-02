@@ -4,6 +4,32 @@
         <title>Expository Essay Analysis: Example</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="demo.js"></script>
+        <script>
+			function checkRestoreSECPos () {
+				let secs = $('section');
+				let vpHeight = $(window).height();
+				let scrollTop = $(window).scrollTop();
+				secs.each(function (index) {
+					let sec = secs.eq(index);
+					let secTop = sec.offset().top;
+					if(vpHeight + scrollTop - 100 > secTop) {
+						sec.css('top', 0);
+					}
+				});
+			}
+
+            $(document).ready(function(){
+                checkRestoreSECPos();
+				$(document).on('scroll', checkRestoreSECPos);
+            });
+
+			// window.onload = function () {
+			// 	checkRestoreSECPos();
+			// 	$(document).on('scroll', checkRestoreSECPos);
+			// };
+		</script>
         <style>
             span.joint {
                 color: #a6611a;
@@ -32,14 +58,16 @@
                 display: block;
             }
 
+            section {
+                position: relative;
+                top: 100px;
+            }
+
         </style>
     </head>
     <body>
         <nav>
-            <a>+</a>
-            <a href="index.html">Home</a>
-            <a href="example.html">Essay Example</a>
-            <a href="analysis.html">Strutural Analysis</a>
+            <a><span style="display: inline-block;">+</span><a href="index.html">Home</a><a href="example.html">Essay Example</a><a href="analysis.html">Strutural Analysis</a>
         </nav>
         <article>
             <h1>To Prevent a Martian Plague, NASA Needs to Build a Very Special Lab</h1>
