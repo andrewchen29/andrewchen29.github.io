@@ -1,47 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>GameIntro</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
-        <link rel="stylesheet" href="./style_menu.css">
-        <style>
-            video {
-                width: 80vh;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="menu">
-            <a href="index.html"><i class="fas fa-home"></i></a>
-            <a href="autobiography.html"><i class="fas fa-user"></i></a>
-            <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
-            <a href="info.html"><i class="fas fa-info"></i></a>
-            <button id="toggle-btn">
+
+<head>
+    <title>GameIntro</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+    <link rel="stylesheet" href="./style_menu.css">
+    <style>
+        video {
+            width: 80vh;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="autobiography.html"><i class="fas fa-user"></i></a>
+        <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
+        <a href="info.html"><i class="fas fa-info"></i></a>
+        <button id="toggle-btn">
             <i class="fas fa-plus"></i>
-            </button>
-        </div>    
-        <script src="./script_menu.js"></script>
-        <article>
-            <figure style="text-align: center;">
-                <img src="img/Unity_2021.svg.png" style="max-width: 90%; z-index: -10; position: fixed; top: 20vh;left: 25vh; opacity: 20%;"/>
-            </figure>
-            <h1 style="text-align: center;">Game Progranning</h1>
-            <figure style="text-align: center;">
-                <img src="img/GamePlayer.png" style="max-width: 20vw;"/>
-            </figure>    
-            <section>
-                    <p>I have a class called game programming. Here are the demo video of the game I programmed by Unity/C# with my group. Enjoy~
-            </section>
-            <figure style="text-align: center;">
-                <video width="50vw" controls>
-                    <source src="./img/Produce_0.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </figure>
-        </article>
-    </body>
+        </button>
+    </div>
+    <script src="./script_menu.js"></script>
+    <article>
+        <figure style="text-align: center;">
+            <img src="img/Unity_2021.svg.png" 
+            style=
+            "position: fixed;
+            width: 500px;
+            margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+            left: 0;
+            right: 0;
+            opacity: 0.4;
+            z-index: -999;" />
+        </figure>
+        <h1 style="text-align: center;" class="en">Game Progranning</h1>
+        <h1 style="text-align: center;" class="ch">遊戲程式設計</h1>
+        <figure style="text-align: center;">
+            <img src="img/GamePlayer.png" style="max-width: 20vw;" />
+        </figure>
+        <section class="en">
+            <p>Making a game has always been a dream of mine. I love playing video games so I know how much hapiness a
+                game can bring. I wanted to make a game that everyone would have fun playing it. </p>
+            <p>I started to learn how to make game last year. I choose Unity as my game engine because it has more
+                tutorials and more people using it. In this way, not only more people can answer my questions, but also
+                it is more convenient to solve bugs. I made a small 2D platformer last summer break. I realized that it
+                is hard to make a interesting game by myself. It need so much time to make a single game.</p>
+            <p>In this semester, I have a class called game programming. The final project of this class is to make a
+                game with our classmates, so I find a some like-minded friends to make a 3D action adventure game.
+                The game we made is called "Find Your Way Back". It's a game that you need to control the robots
+                character, which has three abilities, defeat the monsters and get out of the abandoned city. I'm in
+                charge of how to control the movement of character, while other team members make different scenes and
+                monsters.</p>
+            <p>Here is the demo video of our games. Hope you will like it. We are still improving, and we will continue
+                to upload the latest progress if there is any.</p>
+        </section>
+        <section class="ch">
+            <p>做一款遊戲一直是我的夢想。喜歡打電動讓我知道一款遊戲能帶來多大的快樂。我想做一款每個人都能開心遊玩的遊戲</p>
+            <p>我從去年開始學習如何寫一款遊戲。我選擇Unity作為我的遊戲引擎是因為他是最多人使用也最多教學的遊戲引擎。這樣不僅比較多人能解答我的問題，遇到bugs時也比較方便解決。我在去年暑假時做了一款2D平台遊戲。我了解到光我一個人是不夠的。寫一款好玩的遊戲所需花費的時間與精力是多到無法想像的。
+            </p>
+            <p>這學期，我有一門課叫做遊戲程式設計。這門課的final project是要與組員一起寫一款遊戲。我們寫了一個名為“Find Your Way
+                Back”的遊戲。這是一款控制擁有三種能力的機器人角色打敗怪物並走出廢棄城市的遊戲。我負責寫如何操作腳色，而其他團隊成員製作不同的場景和怪物。</p>
+            <p>下面是我們的遊戲畫面，希望你會喜歡。我們還在持續改良中，如果有最新進度也會持續上傳。</p>
+        </section>
+        <figure style="text-align: center;">
+            <video width="50vw" controls>
+                <source src="./img/Produce_0.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </figure>
+    </article>
+</body>
+
 </html>
