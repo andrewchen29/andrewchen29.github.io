@@ -1,34 +1,99 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <title>Autobiography: Home</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <style>
-            p {
-                color: darkslateblue;
+<html lang="en">
+
+<head>
+    <title>Autobiography: Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+    <link rel="stylesheet" href="./style_menu.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+         }
+
+         section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -999;
+         }
+         .waterContainer {
+            width: 200px;
+            height: 200px;
+            background-color: #07bdff;
+            border-radius: 0 0 40px 40px;
+            box-shadow: inset 0 0 50px #1c637c;
+            position: relative;
+            overflow: hidden;
+            z-index: -999;
+            opacity: 0.7;
+         }
+         .waterContainer::before {
+            position: absolute;
+            content: '';
+            width: 200%;
+            height: 200%;
+            background-color: #ffffff;
+            top: -150%;
+            left: -50%;
+            border-radius: 40%;
+            animation: wave 12s infinite linear;
+         }
+         .waterContainer::after {
+            position: absolute;
+            content: '';
+            width: 204%;
+            height: 204%;
+            background-color: #ececec80;
+            top: -150%;
+            left: -52%;
+            border-radius: 40%;
+            animation: wave 12s infinite linear;
+            animation-delay: 0.5s;
+         }
+         @keyframes wave {
+            0% {
+                transform: rotate(0deg);
             }
-        </style>
-    </head>
-    <body>
-        <figure style="text-align: center;">
-            <img src="img/homeBackground.jpg" style="max-width: 80vw; z-index: -10; opacity: 60%;"/>
-        </figure>
-        <nav>
-            <a>+</a>
-            <a href="index.html">Home</a>
-            <a href="autobiography.html">Autobiography</a>
-        </nav>
-        <article style="text-align: center; position: absolute;
-        width: 100%; top: 50%; transform: translateY(-50%);">
-            <h1 style="color: darkslateblue;">Autobiography: Home</h1>
-            <p>Fall 2022, Bilingual Web Design, YUNG-CHUN CHEN<br/>
-                andrewchen0209@gmail.com
-            </p>
-            <p>
-             Watch out my info in <a href="autobiography.html">Autobiography</a>!
-            </p> 
-            <p><em>Updated on Oct 15, 2022</em></p>
-        </article>
-    </body>
+            100% {
+                transform: rotate(360deg);
+            }
+         }
+         
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="autobiography.html"><i class="fas fa-user"></i></a>
+        <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
+        <a href="info.html"><i class="fas fa-info"></i></a>
+        <button id="toggle-btn">
+        <i class="fas fa-plus"></i>
+        </button>
+    </div>    
+    <script src="./script_menu.js"></script>
+    
+    <article style="text-align: center; position: absolute;
+    width: 100%; top: 50%; transform: translateY(-50%);">
+        <h1 style="color: darkslateblue;">Autobiography: Home</h1>
+        <p>Fall 2022, Bilingual Web Design, YUNG-CHUN CHEN<br/>
+            andrewchen0209@gmail.com
+        </p>
+        <p>
+            Watch out my info in <a href="autobiography.html">Autobiography</a>!
+        </p> 
+        <p><em>Updated on Dec 22, 2022</em></p>
+    </article>
+    <section>
+        <div class="waterContainer"></div>    
+    </section>
+    
+</body>    
 </html>

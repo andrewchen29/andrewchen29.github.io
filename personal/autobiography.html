@@ -4,16 +4,24 @@
         <title>自傳</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+        <link rel="stylesheet" href="./style_menu.css">
         <style>
 
         </style>
     </head>
     <body>
-        <nav>
-            <a>+</a>
-            <a href="index.html">Home</a>
-            <a href="autobiography.html">Autobiography</a>
-        </nav>
+        <div class="menu">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="autobiography.html"><i class="fas fa-user"></i></a>
+            <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
+            <a href="info.html"><i class="fas fa-info"></i></a>
+            <button id="toggle-btn">
+            <i class="fas fa-plus"></i>
+            </button>
+        </div>    
+        <script src="./script_menu.js"></script>
         <article>
             <figure style="text-align: center;">
                 <img src="img/autoBackground2.jpg" style="max-width: 100%; z-index: -10; position: fixed; top: 0;left: 0; opacity: 20%;"/>

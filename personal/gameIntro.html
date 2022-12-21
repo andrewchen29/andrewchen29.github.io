@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GameIntro</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+        <link rel="stylesheet" href="./style_menu.css">
+        <style>
+            video {
+                width: 80vh;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="autobiography.html"><i class="fas fa-user"></i></a>
+            <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
+            <a href="info.html"><i class="fas fa-info"></i></a>
+            <button id="toggle-btn">
+            <i class="fas fa-plus"></i>
+            </button>
+        </div>    
+        <script src="./script_menu.js"></script>
+        <article>
+            <figure style="text-align: center;">
+                <img src="img/Unity_2021.svg.png" style="max-width: 90%; z-index: -10; position: fixed; top: 20vh;left: 25vh; opacity: 20%;"/>
+            </figure>
+            <h1 style="text-align: center;">Game Progranning</h1>
+            <figure style="text-align: center;">
+                <img src="img/GamePlayer.png" style="max-width: 20vw;"/>
+            </figure>    
+            <section>
+                    <p>I have a class called game programming. Here are the demo video of the game I programmed by Unity/C# with my group. Enjoy~
+            </section>
+            <figure style="text-align: center;">
+                <video width="50vw" controls>
+                    <source src="./img/Produce_0.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+        </article>
+    </body>
+</html>
