@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Autobiography: Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+    <link rel="stylesheet" href="./style_menu.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+         }
+
+         section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            z-index: -999;
+         }
+         .waterContainer {
+            width: 200px;
+            height: 200px;
+            background-color: #07bdff;
+            border-radius: 0 0 40px 40px;
+            box-shadow: inset 0 0 50px #1c637c;
+            position: relative;
+            overflow: hidden;
+            z-index: -999;
+            opacity: 0.7;
+         }
+         .waterContainer::before {
+            position: absolute;
+            content: '';
+            width: 200%;
+            height: 200%;
+            background-color: #ffffff;
+            top: -150%;
+            left: -50%;
+            border-radius: 40%;
+            animation: wave 12s infinite linear;
+         }
+         .waterContainer::after {
+            position: absolute;
+            content: '';
+            width: 204%;
+            height: 204%;
+            background-color: #ececec80;
+            top: -150%;
+            left: -52%;
+            border-radius: 40%;
+            animation: wave 12s infinite linear;
+            animation-delay: 0.5s;
+         }
+         @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+         }
+         
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="autobiography.html"><i class="fas fa-user"></i></a>
+        <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
+        <a href="info.html"><i class="fas fa-info"></i></a>
+        <button id="toggle-btn">
+        <i class="fas fa-plus"></i>
+        </button>
+    </div>    
+    <script src="./script_menu.js"></script>
+    
+    <article style="text-align: center; position: absolute;
+    width: 100%; top: 20%; transform: translateY(-10%);">
+        <h1 style="color: darkslateblue;">Wellcome to Andrew's website!</h1>
+        <p>
+            <figure style="padding: 5vh 0;">
+                <img src="./img/auto1.jpg" style="width: 20vw;">
+            </figure>
+        </p>
+        <p>
+            Watch out my info in <a href="autobiography.html">Autobiography</a> or click the menu button at the top-left~
+        </p>
+        <p><em>Updated on Dec 26, 2022</em></p>
+    </article>
+    <!-- <section>
+        <div class="waterContainer"></div>    
+    </section> -->
+    
+</body>    
+</html>
