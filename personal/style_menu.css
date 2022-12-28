@@ -7,10 +7,6 @@
   
   }
   
-  body {
-  background-color: white;
-  }
-  
   #toggle-btn,
   
   .menu a {
@@ -26,11 +22,14 @@
     place-items: center;
   
     border-radius: 50%;
+
+    z-index: 999;
   
   }
   
   #toggle-btn:hover {
     opacity: 1;
+    cursor: pointer;
   }
 
   #toggle-btn {
@@ -59,6 +58,8 @@
     transition: 0.3s;
   
     opacity: 0.7;
+
+    z-index: 999;
   }
   
   .menu a {
@@ -138,5 +139,7 @@
     font-size: 20px;
   
     text-decoration: none;
+
+    z-index: 999;
   
   }
