@@ -7,23 +7,23 @@
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <script src="demo.js"></script>
         <script>
-			function checkRestoreSECPos () {
-				let secs = $('section');
-				let vpHeight = $(window).height();
-				let scrollTop = $(window).scrollTop();
-				secs.each(function (index) {
-					let sec = secs.eq(index);
-					let secTop = sec.offset().top;
-					if(vpHeight + scrollTop - 100 > secTop) {
-						sec.css('top', 0);
+
+            $(document).ready(()=>{
+				$(document).on('scroll', animateSection);
+			});
+
+			$(window).on("load", animateSection());
+
+			function animateSection() {
+				let allSections = $('article > section');
+				let screenHeight = $(window).height(), scrollTop = $(window).scrollTop();
+				allSections.each((index)=>{
+					let section = allSections.eq(index);
+					if(screenHeight + scrollTop - 50 > section.offset().top) {
+						section.animate({top: 0, opacity: 1}, 500);
 					}
 				});
-			}
-
-            $(window).on("load", function () {
-                checkRestoreSECPos();
-				$(document).on('scroll', checkRestoreSECPos);
-            });
+			};
 		</script>
         <style>
             span.joint {
@@ -37,21 +37,28 @@
                 color: white;
             }
 
-            span.vocab > span {
-                display: none;
-                position: fixed;
-                top: 50%;
-                left: 10px;
-                border-radius: 2px;
-                background-color: #dfc27d;
-                color: #000a16;
-                opacity: 0.9;
-                text-indent: 0%;
-            }
+			span.vocab > span {
+				display: none;
+				position: fixed;
+				top: 50%;
+				left: 10px;
+				max-width: 50vw;
+				padding: 0 4px;
+				border-radius: 2px;
+				background-color: #dfc27d;
+				color: #000a16;
+				text-indent: 0;
+				opacity: 0;
+				transform: translateY(-50%);
+				transition: all 0.3s ease-out;
+			}
 
-            span.vocab:hover > span{
-                display: block;
-            }
+			span.vocab:hover > span {
+				display: block;
+				z-index: 2;
+				opacity: 0.9;
+				transition: all 0.3s ease-out;
+			}
 
             section {
                 position: relative;
@@ -80,7 +87,7 @@
                     <span class="joint">▶</span>"It is possible that on Mars there are pathogens," he wrote, "organisms which, if transported to 
                     the terrestrial environment, might do enormous biological damage -   a Martian plague."</p>
                     <p>Michael Crichton imagined a related scenario in his novel "The Andromeda Strain."
-                    <span class="joint">▶</span>Such situations, in which <span class="vocab">extraterrestrial <span><b>"extraterrestrial"</b> - of or from outside the earth or its atmosphere</span> </span> samples contain dangerous tagalong organisms, are 
+                    <span class="joint">▶</span>Such situations, in which <span class="vocab">extraterrestrial<span><b>"extraterrestrial"</b> - of or from outside the earth or its atmosphere</span></span> samples contain dangerous <span class="vocab">tagalong<span><b>"tagalong"</b> - annoying followers</span></span> organisms, are 
                     examples of backward contamination, or the risk of material from other worlds harming Earth's 
                     biosphere.
                     <p>The likelihood that such pathogens exist is probably small," Sagan wrote, "but we cannot take even 
@@ -237,7 +244,7 @@
                     building a cheaper, modular high-containment facility and plunking it within a harder-shell 
                     building.
                     <span class="joint">▶</span>"There's a lot that is still on the table that we're looking at;' Dr. Harrington said.
-                    Whatever  NASA decides, the team's investigation suggested that the process of designing and 
+                    <span class="joint">▶</span>Whatever  NASA decides, the team's investigation suggested that the process of designing and 
                     building a sample study site could take 8 to 12 years -   pushing up against the timeline for the 
                     actual sample return. Given that, team members recommended that NASA spool up certain plans 
                     approximately now.</p>
