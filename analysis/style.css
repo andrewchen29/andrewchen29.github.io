@@ -43,62 +43,60 @@ h3 {
     margin: 0.5vh 0;
 }
 
+
 nav {
-    position: fixed;
-    z-index: 999;
-    top: 10px;
-    left: 10px;
-    text-align: center;
-    font-family:  Poppins, sans-serif;
-    font-size: 2vh;
-    line-height: 3vh;  
+	position: fixed;
+	z-index: 3;
+	top: 10px;
+	left: 10px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-family: Poppins, sans-serif;
+	font-size: 2vh;
+	line-height: 3vh;
 }
 
 nav > a {
-    display: inline-block;
-    vertical-align: middle;
-    background-color: #323232;
-    color: white;
-    text-decoration: none;
-    opacity: 0.6;
-    cursor: pointer;
-    transition: opacity 0.3s ease-out;
-}
-
-nav > a:first-of-type {
-    padding: 2px 10px;
+	background-color: #323232;
+	color: white;
+	width: 100%;
+	padding: 2px 4px;
+	text-decoration: none;
+	opacity: 0.6;
+	transition: all 0.3s ease-out;
 }
 
 nav > a:visited {
-    color: white;
+	color: white;
 }
 
-nav > a:hover {
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
+nav > a:first-of-type {
+	width: 4.8vh;
 }
 
 nav > a:not(:first-of-type) {
-    width: 0;
-    overflow-x: hidden;
-    white-space: nowrap;
-    transition: width 0.3s ease-out;
+	display: none;
+	border-right: 0;
+	border-top: solid 2px white;
+	opacity: 0;
 }
 
-nav > a.open {
-    border-left: 2px solid white;
-    padding: 2px 10px;
-    width: 12vw;
-    transition: width 0.5s ease-out;
+nav > a:hover {
+	opacity: 0.95 !important;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
 }
 
 nav > a > span {
-    transition: all 0.3s ease-out;
+	display: inline-block;
+	transform: rotate(0deg);
+	transition: all 0.2s linear;
 }
 
-nav > a > span.rotated {
-    transform: rotate(45deg);
-    transition: all 0.5s ease-out;
+nav > a.rotate > span {
+	transform: rotate(45deg);
+	transition: all 0.2s linear;
 }
 
 article {
@@ -123,3 +121,51 @@ a, a:visited {
     text-decoration: underline;
 }
 
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size: 2.4vh;
+		line-height: 3.6vh;
+	}
+
+	h1 {
+		font-size: 4.8vh;
+		line-height: 7.2vh;
+	}
+
+	h2 {
+		font-size: 3.6vh;
+		line-height: 5.4vh;
+	}
+
+	h3 {
+		font-size: 3vh;
+		line-height: 4.5vh;
+	}
+
+	article {
+		margin: 3vh 0;
+	}
+
+	section {
+		margin: 2vh 0;
+	}
+
+	nav {
+		flex-direction: row;
+		align-items: stretch;
+		font-size: 2vh;
+	}
+
+	nav > a {
+		width: fit-content;
+	}
+
+	nav > a:first-of-type {
+		width: 2.4vw;
+	}
+
+	nav > a:not(:first-of-type) {
+		border-left: solid 2px white;
+		border-top: 0;
+	}
+}
