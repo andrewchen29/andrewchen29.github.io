@@ -108,38 +108,20 @@
     opacity: 1;
   }
 
-  #insta-link {
-  
-    background-color: lightblue;
-  
-    color: #0f1730;
-  
-    position: absolute;
-  
-    display: block;
-  
-    margin: auto;
-  
-    left: 0;
-  
-    right: 0;
-  
-    bottom: 30px;
-  
-    padding: 15px 0;
-  
-    border-radius: 5px;
-  
-    width: 320px;
-  
-    text-align: center;
-  
-    font-family: "Poppins", sans-serif;
-  
-    font-size: 20px;
-  
-    text-decoration: none;
+  @media only screen and (max-width: 800px) {
+    #toggle-btn {
+      height: 50px;
+      width: 50px;
+      top: 15px;
+      left: 15px;
+      font-size: 20px;
+    }
 
-    z-index: 999;
-  
-  }
+    .menu a {
+      height: 35px;
+      width: 35px;
+      top: 30px;
+      left: 30px;
+      font-size: 11px;
+    }
+}

@@ -8,94 +8,98 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
     <link rel="stylesheet" href="./style_menu.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-         }
+        section {
+            background-color: transparent;
+            opacity: 1;
+        }
 
-         section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body>img {
+            position: fixed;
+            z-index: -999;
             width: 100%;
-            height: 100vh;
-            z-index: -999;
-         }
-         .waterContainer {
-            width: 200px;
-            height: 200px;
-            background-color: #07bdff;
-            border-radius: 0 0 40px 40px;
-            box-shadow: inset 0 0 50px #1c637c;
-            position: relative;
-            overflow: hidden;
-            z-index: -999;
-            opacity: 0.7;
-         }
-         .waterContainer::before {
-            position: absolute;
-            content: '';
-            width: 200%;
-            height: 200%;
-            background-color: #ffffff;
-            top: -150%;
-            left: -50%;
-            border-radius: 40%;
-            animation: wave 12s infinite linear;
-         }
-         .waterContainer::after {
-            position: absolute;
-            content: '';
-            width: 204%;
-            height: 204%;
-            background-color: #ececec80;
-            top: -150%;
-            left: -52%;
-            border-radius: 40%;
-            animation: wave 12s infinite linear;
-            animation-delay: 0.5s;
-         }
-         @keyframes wave {
-            0% {
-                transform: rotate(0deg);
+            opacity: 0.2;
+            transform: translateY(-10%);
+        }
+
+        @media only screen and (max-width: 1200px) {
+            body>img {
+                width: auto;
+                height: 120%;
             }
-            100% {
-                transform: rotate(360deg);
-            }
-         }
-         
+        }
     </style>
 </head>
 
 <body>
+    <img src="./img/autoBackground.jpg" />
     <div class="menu">
         <a href="index.html"><i class="fas fa-home"></i></a>
         <a href="autobiography.html"><i class="fas fa-user"></i></a>
         <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
         <a href="info.html"><i class="fas fa-info"></i></a>
         <button id="toggle-btn">
-        <i class="fas fa-plus"></i>
+            <i class="fas fa-plus"></i>
         </button>
-    </div>    
+        <button id="translate-btn">
+            <span class="ch"><i class="fas fa-globe-asia"></i></span>
+            <span class="en"><i class="fas fa-globe-europe"></i></span>
+        </button>
+        <button id="backToTop-btn">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
     <script src="./script_menu.js"></script>
-    
-    <article style="text-align: center; position: absolute;
+    <script src="./script_scroll.js"></script>
+    <article style="position: absolute;
     width: 100%; top: 20%; transform: translateY(-10%);">
-        <h1 style="color: darkslateblue;">Wellcome to Andrew's website!</h1>
-        <p>
-            <figure style="padding: 5vh 0;">
-                <img src="./img/auto1.jpg" style="width: 20vw;">
+        <section style="text-align: center;">
+            <h1 style="color: darkslateblue; " class="en">Wellcome to Andrew's website!</h1>
+            <h1 style="color: darkslateblue; " class="ch">歡迎來到駿的網站!</h1>
+        </section>
+        <section class="ch">
+            <figure style="padding: 5vh 0; float: left; margin-right: 2vw;">
+                <img class="me" src="./img/auto2.jpg">
             </figure>
-        </p>
-        <p>
-            Watch out my info in <a href="autobiography.html">Autobiography</a> or click the menu button at the top-left~
-        </p>
-        <p><em>Updated on Dec 26, 2022</em></p>
+            <br>
+            在這個網站裡: <br>
+            <p style="text-indent: 0%; padding: 2%; text-align: center;">
+                你可以知道<a href="./autobiography.html">我是誰</a>.<br>
+            </p>
+            <p style="text-indent: 0%; padding: 2%; text-align: center;">
+                我最近<a href="./gameIntro.html">學了甚麼</a><br>
+            </p>
+            <p style="text-indent: 0%; padding: 2%; text-align: center;">
+                如何<a href="./info.html">聯絡</a>我<br>
+            </p>
+        </section>
+        <section class="en">
+            <figure style="padding: 5vh 0; float: left; margin-right: 2vw;">
+                <img class="me" src="./img/auto2.jpg">
+            </figure>
+            <br>
+            In this website: <br>
+            <p style="text-indent: 0%; padding: 2%; text-align: center;">
+                You can know <a href="./autobiography.html">who I am</a>.<br>
+            </p>
+            <p style="text-indent: 0%; padding: 2%; text-align: center;">
+                <a href="./gameIntro.html">What I learned</a> recently.<br>
+            </p>
+            <p style="text-indent: 0%; padding: 2%; text-align: center;">
+                How to <a href="./info.html">contact</a> me.<br>
+            </p>
+        </section>
+        <section style="text-align: center;" class="en">
+            <h1 style="color: orange; ">Have Fun!</h1>
+        </section>
+        <section style="text-align: center;" class="ch">
+            <!-- 這句翻很爛但我想不到更好的 -->
+            <h1 style="color: orange; ">玩得開心~</h1>
+        </section>
     </article>
-    <!-- <section>
-        <div class="waterContainer"></div>    
-    </section> -->
-    
-</body>    
+
+</body>
+<script src="./script_translate.js"></script>
+
 </html>

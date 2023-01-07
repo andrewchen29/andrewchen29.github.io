@@ -8,12 +8,19 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
     <link rel="stylesheet" href="./style_menu.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <style>
         video {
-            width: 80vh;
+            width: 60vw;
             text-align: center;
         }
 
+        @media only screen and (max-width: 800px) {
+            video {
+                width: 80vw;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -26,13 +33,20 @@
         <button id="toggle-btn">
             <i class="fas fa-plus"></i>
         </button>
+        <button id="translate-btn">
+            <span class="ch"><i class="fas fa-globe-asia"></i></span>
+            <span class="en"><i class="fas fa-globe-europe"></i></span>
+        </button>
+        <button id="backToTop-btn">
+            <i class="fas fa-chevron-up"></i>
+        </button>
     </div>
     <script src="./script_menu.js"></script>
+    <script src="./script_scroll.js"></script>
+
     <article>
         <figure style="text-align: center;">
-            <img src="img/Unity_2021.svg.png" 
-            style=
-            "position: fixed;
+            <img src="img/Unity_2021.svg.png" style="position: fixed;
             width: 50vw;
             margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
             top: 25vh;
@@ -44,31 +58,45 @@
         <h1 style="text-align: center;" class="en">Game Progranning</h1>
         <h1 style="text-align: center;" class="ch">遊戲程式設計</h1>
         <figure style="text-align: center;">
-            <img src="img/GamePlayer.png" style="max-width: 20vw;" />
+            <img src="img/GamePlayer.png" style="width: 50%;" />
         </figure>
         <section class="en">
-            <p>Making a game has always been a dream of mine. I love playing video games so I know how much hapiness a
-                game can bring. I wanted to make a game that everyone would have fun playing it. </p>
-            <p>I started to learn how to make game last year. I choose Unity as my game engine because it has more
-                tutorials and more people using it. In this way, not only more people can answer my questions, but also
-                it is more convenient to solve bugs. I made a small 2D platformer last summer break. I realized that it
-                is hard to make a interesting game by myself. It need so much time to make a single game.</p>
-            <p>In this semester, I have a class called game programming. The final project of this class is to make a
-                game with our classmates, so I find a some like-minded friends to make a 3D action adventure game.
-                The game we made is called "Find Your Way Back". It's a game that you need to control the robots
-                character, which has three abilities, defeat the monsters and get out of the abandoned city. I'm in
-                charge of how to control the movement of character, while other team members make different scenes and
-                monsters.</p>
-            <p>Here is the demo video of our games. Hope you will like it. We are still improving, and we will continue
-                to upload the latest progress if there is any.</p>
+            <p>Making a game has always been a dream of mine. When I was in elementary school, I likes to play all kinds
+                of video games. They gave me so much fun and left me with a creative personality. As I grow up, I want
+                to be a game producer. Though I did not choose computer science as my major at NTHU, I still made some
+                progress by myself.</p>
+            <p>Last summer break, I find a game engine called Unity. It is a program that is used for making games. No
+                matters which type of games you want to make, from 3D action to 2D online card game, you could always
+                find a way on Unity. The best part is that it is the most popular game engine, so it has numerous
+                tutorials and many experts online who can answer my problems. And I used that summer break to make a 2D
+                platformer and realize that it is not that easy. Unfortunately, I finally realize that it is not that
+                easy.</p>
+            <p>The first challenge I faced is not as interesting as I thought. Although most of the part is fun, such as
+                making character moves, drawing animation, designing UI, etc, there are a lot of boring parts. In fact,
+                a game program is composed of many different scripts. Figuring out how every script works individually
+                or how they work together sometimes is a tedious job. Another problem is that it spends me so much time.
+                It costs me two days on merely a character animation, not to mention game mechanism and debugging. After
+                two months of programming, I only got a semi-finished games without time to finish it since I need to
+                get back to school.</p>
+            <p>This semester, I have a class called game programming. It is a class held by the Department of CS
+                teaching how to use Unity and some details knowledge that I never think of before. At the end of the
+                semester, we need to make our own games with our teammates and show them to the professors. The game we
+                made is called “Get Out The City”. It is mainly about a robot wakes up with consciousness in an
+                abandoned city, and tries to figure out how to get out and what is hidden in this city. I am responsible
+                for player control scripts, while other team members make different scenes and monsters.</p>
+            <p>Fortunately, this time, we have more people and more time. Though it’s still not finished yet, it has
+                potential to be a fun and interesting game. Here is the demo video of our games. Hope you enjoy it.</p>
         </section>
         <section class="ch">
-            <p>做一款遊戲一直是我的夢想。喜歡打電動讓我知道一款遊戲能帶來多大的快樂。我想做一款每個人都能開心遊玩的遊戲</p>
-            <p>我從去年開始學習如何寫一款遊戲。我選擇Unity作為我的遊戲引擎是因為他是最多人使用也最多教學的遊戲引擎。這樣不僅比較多人能解答我的問題，遇到bugs時也比較方便解決。我在去年暑假時做了一款2D平台遊戲。我了解到光我一個人是不夠的。寫一款好玩的遊戲所需花費的時間與精力是多到無法想像的。
+            <p>製作遊戲一直是我的夢想。我從小時候就喜歡打電動，各式各樣的都玩。長大後，我想當一個遊戲製作人。雖然我沒有選擇讀資工系，但我還是有想辦法找資源自學。去年暑假，我發現Unity這個遊戲引擎。無論是 3D
+                動作遊戲或是 2D 線上卡牌遊戲，Unity都有支援。最重要的是，它是世界上最多人使用的遊戲引擎，所以網路上早就有大量的教學和高手可以回答我的問題。在那個暑假，我做了一個 2D
+                平台遊戲，才意識到沒我想的那麼容易。</p>
+            <p>第一個問題是它沒有我想像的那麼有趣。雖然大部分的東西像是角色操作，腳色動畫，設計UI等等很好玩，但是也有很多枯燥的部分。事實上，一個遊戲程序是由許多不同的腳本組成的。弄清楚每個腳本如何單獨工作和協同工作有時是一項乏味的工作。第二個問題是它花了我很多時間。僅僅一個角色動畫就花了兩天時間，更談不上游戲機制和debug。經過兩個月的努力，我只得到了一個半成品，因為需要回去上課，而學期間也沒有時間完成它。
             </p>
-            <p>這學期，我有一門課叫做遊戲程式設計。這門課的final project是要與組員一起寫一款遊戲。我們寫了一個名為“Find Your Way
-                Back”的遊戲。這是一款控制擁有三種能力的機器人角色打敗怪物並走出廢棄城市的遊戲。我負責寫如何操作腳色，而其他團隊成員製作不同的場景和怪物。</p>
-            <p>下面是我們的遊戲畫面，希望你會喜歡。我們還在持續改良中，如果有最新進度也會持續上傳。</p>
+            <p>這學期我修了一門課叫遊戲程式設計。是資工系開的課，教Unity的操作方法和一些之前沒想過的用法。學期末有個final
+                project是要以隊為單位製作遊戲給教授們看。我們製作的遊戲叫「荒城逃亡」。主要是在講一個機器人在廢棄城市醒來，試圖弄清楚如何出去以及這座城市的秘密的故事。我負責寫腳色控制的腳本，而其他團隊成員製作不同的場景和怪物。
+            </p>
+            <p>幸運的是，這一次我們有了更多的人與時間。雖然還沒有完成，但我相信他會是一個有趣的遊戲。這是我們遊戲的demo影片。希望你們會喜歡~</p>
         </section>
         <figure style="text-align: center;">
             <video width="50vw" controls>
@@ -78,5 +106,6 @@
         </figure>
     </article>
 </body>
+<script src="./script_translate.js"></script>
 
 </html>

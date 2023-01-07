@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Personal Information</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
-        <link rel="stylesheet" href="./style_menu.css">
-        <style>
-            video {
-                width: 80vh;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="menu">
-            <a href="index.html"><i class="fas fa-home"></i></a>
-            <a href="autobiography.html"><i class="fas fa-user"></i></a>
-            <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
-            <a href="info.html"><i class="fas fa-info"></i></a>
-            <button id="toggle-btn">
-            <i class="fas fa-plus"></i>
-            </button>
-        </div>    
-        <script src="./script_menu.js"></script>
 
-        <a href="https://instagram.com/andrewchen0209?igshid=ZDdkNTZiNTM=" target="_blank" id="insta-link">Follow &nbsp; <i class="fab fa-instagram" style="font-size:20px;color:red"></i></a>
-    </body>
+<head>
+    <title>Personal Information</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+    <link rel="stylesheet" href="./style_menu.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+        body>img {
+            position: fixed;
+            z-index: -999;
+            width: 100%;
+            opacity: 0.2;
+            transform: translateY(-10%);
+        }
+
+        @media only screen and (max-width: 1200px) {
+            body>img {
+                width: auto;
+                height: 120%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./img/autoBackground.jpg" />
+    <div class="menu">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="autobiography.html"><i class="fas fa-user"></i></a>
+        <a href="gameIntro.html"><i class="fas fa-gamepad"></i></a>
+        <a href="info.html"><i class="fas fa-info"></i></a>
+        <button id="toggle-btn">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button id="translate-btn">
+            <span class="ch"><i class="fas fa-globe-asia"></i></span>
+            <span class="en"><i class="fas fa-globe-europe"></i></span>
+        </button>
+        <button id="backToTop-btn">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+    <script src="./script_menu.js"></script>
+    <script src="./script_scroll.js"></script>
+
+    <a href="https://instagram.com/andrewchen0209?igshid=ZDdkNTZiNTM=" target="_blank" class="info-block"
+        id="insta-link"><span class="en">Follow</span><span class="ch">追蹤</span> &nbsp; <i class="fab fa-instagram"
+            style="font-size:20px;color:rgb(224, 89, 89)"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100007025350931" target="_blank" class="info-block"
+        id="face-link"><span class="en">Like</span><span class="ch">按讚</span> &nbsp; <i class="fab fa-facebook"
+            style="font-size:20px;color:rgb(224, 89, 89)"></i></a>
+</body>
+<script src="./script_translate.js"></script>
+
 </html>
