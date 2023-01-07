@@ -52,13 +52,13 @@ article {
 
 section {
     margin: 1.2vh;
-    background-color: rgb(215, 170, 138);
-    border-radius: 5%;
-    opacity: 0.85;
 }
 
 section > p {
     text-indent: 5%;
+    background-color: rgb(215, 170, 138);
+    border-radius: 2vh;
+    opacity: 0.8;
 }
 
 p {
@@ -69,6 +69,10 @@ p {
 a, a:visited {
     color: #323232;
     text-decoration: underline;
+}
+
+figure > img {
+    border-radius: 2vh;
 }
 
 img.me {
@@ -133,7 +137,7 @@ img.me {
     display: block;
     margin: auto;
     padding: 15px 0;
-    border-radius: 5px;
+    border-radius: 2vh;
     width: 320px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
